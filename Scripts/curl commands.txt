@@ -1,0 +1,4 @@
+curl localhost:9000
+curl --data "job_id=1&customerName=ikram&notes=testNote&address=Preston" localhost:9000
+curl -X PUT -d "job_id=5&customerName=ikram&notes=updateNote&address=testAddress" localhost:9000 -v
+curl -X DELETE localhost:9000?job_id=1 -v
