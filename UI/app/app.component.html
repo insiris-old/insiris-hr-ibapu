@@ -1,0 +1,23 @@
+<h1 style="padding-left:15px">Jobs<h1>
+
+<button class='right-button' (click)='toggleImage()'>Add Job</button>
+
+<table class='table' *ngIf='jobs && jobs.length'>
+    <thead>
+        <tr>
+            <th>Customer Name</th>
+            <th>Address</th>
+            <th>Notes</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let job of jobs'>
+            <td>{{job.customerName}}</td>
+            <td>{{job.notes}}</td>
+            <td>{{job.address}}</td>
+            <a (click)='toggleImage()'>Edit</a>
+            <a (click)='deleteJob(job.job_id)'>Delete</a>
+        </tr>
+    </tbody>
+</table>
