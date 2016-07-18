@@ -1,1 +1,4 @@
 Frontend to be completed
+
+Might need to run following if API not working properly
+./activator clean; ./activator compile; ./activator run;
